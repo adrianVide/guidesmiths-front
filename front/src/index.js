@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import rootReducer from './reducers/rootReducer';
-import { PhoneList } from "./components/PhoneList";
+import { PhoneList } from "./components/PhoneList/PhoneList";
 import { Phone } from "./components/Phone/Phone";
 
 
