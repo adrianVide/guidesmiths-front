@@ -1,18 +1,28 @@
 import React from 'react'
-import {connect} from 'react-redux';
+import { useSelector } from 'react-redux'
 
 export const PhoneList = () => {
-    console.log(phoneList)
+    const phones = useSelector(state => state.phones)
+
+    function singlePhone() {
+        console.log('yes')
+    }
+
+
     return (
         <div>
-            test
+            {phones.map(phone => {
+                return (
+                    <div key={phone.id}>
+                       <button onClick={singlePhone}><h2>{phone.name}</h2></button>
+                    </div>
+                )
+            })}
         </div>
     )
 }
 
 
-const mapStateToProps = (state) => {
-    return { phoneList: state.phoneList }
-}
 
-export default connect(mapStateToProps)(PhoneList);
+
+
