@@ -1,5 +1,6 @@
-h1 {
-  justify-content: center;
+.choose {
+  text-align: center;
+  color: white;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -30,6 +31,8 @@ h1 {
 .specs {
   color: gray;
   justify-content: left;
+  display: flex;
+  align-items: center;
 }
 
 img {

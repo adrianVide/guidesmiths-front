@@ -33,20 +33,8 @@ export const Phone = () => {
           </div>
         </div>
       ) : (
-        <h1>Choose your phone</h1>
+        <h1 className='choose'>Choose your phone</h1>
       )}
     </>
-    // <div>
-    //   <div className="container center">
-    //     <div className="card">
-    //       <h2>{phone.name}</h2>
-    //       <hr />
-    //       <p>
-    //         {phone.description}
-    //       </p>
-    //       <button>Next</button>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
