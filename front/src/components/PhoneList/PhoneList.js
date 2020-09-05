@@ -7,9 +7,7 @@ export const PhoneList = () => {
     const dispatch = useDispatch()
 
     function singlePhone(id) {
-        console.log(id)
         const phone = phones.find((phone) => phone.id === id);
-        console.log(phone)
         dispatch(phoneSelected(phone))        
     }
 
