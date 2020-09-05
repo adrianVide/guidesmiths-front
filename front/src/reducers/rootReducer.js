@@ -71,7 +71,7 @@ const initialState = {
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-    case PHONE_SELECTED:
+    case 'PHONE_SELECTED':
       return {
         ...state,
         phone: action.phone,
