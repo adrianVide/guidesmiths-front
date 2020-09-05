@@ -1,5 +1,0 @@
-
-
-function selectedPhone(state, action) {
-    
-}

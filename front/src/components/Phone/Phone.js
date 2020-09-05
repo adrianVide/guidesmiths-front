@@ -5,30 +5,31 @@ import "./Phone.css";
 export const Phone = () => {
   const phone = useSelector((state) => state.phone);
 
-
-
   return (
-    <div class="container">
-      <div class="images">
-        <img src={"http://localhost:3001/images/" + phone.imageFileName} />
-      </div>
+    <>
+      {Object.keys(phone).length !== 0 ? (
+        <div class="container">
+          <div class="images">
+            <img src={"http://localhost:3001/images/" + phone.imageFileName} alt={phone.name} />
+          </div>
 
-      <div class="product">
-        <p>{phone.manufacturer}</p>
-        <h1>{phone.name}</h1>
-        <h2>{phone.price} €</h2>
-        <p class="desc">
-          {phone.description}
-        </p>
-        <div class="buttons">
-          <button class="add">Add to Cart</button>
-          <button class="like">
-            <span>♥</span>
-          </button>
+          <div class="product">
+            <p>{phone.manufacturer}</p>
+            <h1>{phone.name}</h1>
+            <h2>{phone.price} €</h2>
+            <p class="desc">{phone.description}</p>
+            <div class="specs">
+              <p>Specifications:</p>
+              <ul>
+                <li>{phone.screen}</li>
+                <li>{phone.processor}</li>
+                <li>{phone.ram} MB of RAM memory</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-
+      ) : null}
+    </>
     // <div>
     //   <div className="container center">
     //     <div className="card">
