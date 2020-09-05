@@ -6,16 +6,20 @@ body {
   background-color: lightgrey;
 }
 
-.row {
+.flexcont {
   display: flex;
-  max-width: 75%;
+  justify-content: center;
+
 }
 
-.column {
-  flex: 50%;
+.flexitem1 {
 }
 
-@media screen and (max-width: 600px) {
+.flexitem2 {
+
+}
+
+/* @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
@@ -26,6 +30,6 @@ body {
 
 .container {
   justify-content: center;
-}
+} */
 
 

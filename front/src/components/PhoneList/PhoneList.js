@@ -15,7 +15,7 @@ export const PhoneList = () => {
 
 
     return (
-        <div>
+        <div className='list'>
             {phones.map(phone => {
                 return (
                     <div key={phone.id}>

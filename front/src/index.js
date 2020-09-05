@@ -10,9 +10,9 @@ import store from "./storeConfig";
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store} className="container">
-      <div className="row">
-        <PhoneList className="column" />
-        <Phone className="column" />
+      <div className="flexcont">
+        <PhoneList className="flexitem1" />
+        <Phone className="flexitem2" />
       </div>
     </Provider>
   </React.StrictMode>,
