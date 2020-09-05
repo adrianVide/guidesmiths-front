@@ -28,7 +28,7 @@ export const Phone = () => {
             </div>
             <div className="specs">
               <i className="material-icons md-18">power_input</i>
-              {phone.ram} MB RAM
+              {phone.ram} GB RAM
             </div>
           </div>
         </div>

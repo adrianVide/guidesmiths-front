@@ -17,8 +17,14 @@
 }
 .list-button:hover {
   background-color: #dfdfdf;
+  color: white;
 }
 .list-button:active {
   position: relative;
   top: 2px;
+}
+
+.list-button:focus {
+    color: rgb(65, 65, 65);
+    background-color: lightgray;
 }
