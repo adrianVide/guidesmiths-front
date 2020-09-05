@@ -1,3 +1,4 @@
+import PHONE_SELECTED from ".././actions/actions";
 const initialState = {
   phones: [
     {
@@ -69,7 +70,15 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case PHONE_SELECTED:
+      return {
+        ...state,
+        phone: action.phone,
+      };
+    default:
+      return state;
+  }
 };
 
 export default rootReducer;

@@ -10,8 +10,7 @@ export const PhoneList = () => {
         console.log(id)
         const phone = phones.find((phone) => phone.id === id);
         console.log(phone)
-        dispatch(phoneSelected(phone))
-        
+        dispatch(phoneSelected(phone))        
     }
 
 

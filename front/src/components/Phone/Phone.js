@@ -4,6 +4,7 @@ import "./Phone.css";
 
 export const Phone = () => {
   const phone = useSelector((state) => state.phone);
+  console.log(phone)
 
  
   return (
