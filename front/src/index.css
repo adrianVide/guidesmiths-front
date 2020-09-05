@@ -9,6 +9,8 @@ body {
 .flexcont {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 
 }
 
