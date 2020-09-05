@@ -1,0 +1,26 @@
+.list {
+    color: red;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* padding: 2em; */
+  
+  }
+  
+  .list-button {
+      background-color: white;
+      border-radius:10px;
+      border:2px solid grey;
+      display:inline-block;
+      color:grey;
+      font-size:11px;
+      padding:0px 76px;
+    text-decoration:none;
+    margin: 3px 0px;
+    min-width: 300px;
+  }
+  .list-button:hover {
+      background-color:#dfdfdf;
+  }
+  .list-button:active {
+      position:relative;
+      top:2px;
+  }

@@ -13,7 +13,7 @@ export const Phone = () => {
             src={"http://localhost:3001/images/" + phone.imageFileName}
             alt={phone.name}
           />
-<p className="brand">{phone.manufacturer}</p>
+          <p className="brand">{phone.manufacturer}</p>
           <h1>{phone.name}</h1>
           <p className="price">{phone.price} €</p>
           <p className="desc">{phone.description}</p>
