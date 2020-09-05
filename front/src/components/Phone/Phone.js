@@ -8,27 +8,33 @@ export const Phone = () => {
   return (
     <>
       {Object.keys(phone).length !== 0 ? (
-        <div class="container">
-          <div class="images">
-            <img src={"http://localhost:3001/images/" + phone.imageFileName} alt={phone.name} />
-          </div>
-
-          <div class="product">
-            <p>{phone.manufacturer}</p>
-            <h1>{phone.name}</h1>
-            <h2>{phone.price} €</h2>
-            <p class="desc">{phone.description}</p>
-            <div class="specs">
-              <p>Specifications:</p>
-              <ul>
-                <li>{phone.screen}</li>
-                <li>{phone.processor}</li>
-                <li>{phone.ram} MB of RAM memory</li>
-              </ul>
+        <div className="card">
+          <img
+            src={"http://localhost:3001/images/" + phone.imageFileName}
+            alt={phone.name}
+          />
+<p className="brand">{phone.manufacturer}</p>
+          <h1>{phone.name}</h1>
+          <p className="price">{phone.price} €</p>
+          <p className="desc">{phone.description}</p>
+          <div className="specs-container">
+            <div className="specs">
+              <i className="material-icons md-18">smartphone</i>
+              {phone.screen}
+            </div>
+            <div className="specs">
+              <i className="material-icons md-18">memory</i>
+              {phone.processor}
+            </div>
+            <div className="specs">
+              <i className="material-icons md-18">power_input</i>
+              {phone.ram} MB RAM
             </div>
           </div>
         </div>
-      ) : null}
+      ) : (
+        <h1>Choose your phone</h1>
+      )}
     </>
     // <div>
     //   <div className="container center">
@@ -43,9 +49,4 @@ export const Phone = () => {
     //   </div>
     // </div>
   );
-};
-
-const mapStateToProps = (state, ownProps) => {
-  let id = ownProps.match.params.phone_id;
-  return { phone: state.phones.find((phone) => phone.id === id) };
 };

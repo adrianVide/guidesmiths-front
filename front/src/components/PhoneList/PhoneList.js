@@ -17,7 +17,7 @@ export const PhoneList = () => {
             {phones.map(phone => {
                 return (
                     <div key={phone.id}>
-                       <button onClick={() => singlePhone(phone.id)}><h2>{phone.name}</h2></button>
+                       <button onClick={() => singlePhone(phone.id)} className='btn btn-primary btn-lg'><h2>{phone.name}</h2></button>
                     </div>
                 )
             })}

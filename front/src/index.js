@@ -5,23 +5,19 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { PhoneList } from "./components/PhoneList/PhoneList";
 import { Phone } from "./components/Phone/Phone";
-import store from './storeConfig'
-
-
-
+import store from "./storeConfig";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      {/* <App /> */}
-      <PhoneList />
-      <Phone />
+    <Provider store={store} className="container">
+      <div className="row">
+        <PhoneList className="column" />
+        <Phone className="column" />
+      </div>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
-
-
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
