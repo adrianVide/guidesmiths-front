@@ -1,4 +1,4 @@
-import PHONE_SELECTED from ".././actions/actions";
+
 const initialState = {
   phones: [
     {
