@@ -14,14 +14,7 @@ export function* workerFetchPhones() {
     });
   }
 }
-// export function* workerFetchPhones() {
-//     try {
-//         const resp = yield call(axios.get, 'http://localhost:3001/phones');
-//         yield put(phoneListSuccess(resp.data))
-//     } catch (error) {
-//         yield put(phoneListError(error.message))
-//     }
-// }
+
 
 //watcher function
 export function* watchFetchPhones() {
