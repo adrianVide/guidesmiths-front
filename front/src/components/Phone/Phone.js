@@ -4,6 +4,7 @@ import "./Phone.css";
 
 export const Phone = () => {
   const phone = useSelector((state) => state.phone);
+  const loading = useSelector((state) => state.loading);
 
   return (
     <>
@@ -32,8 +33,10 @@ export const Phone = () => {
             </div>
           </div>
         </div>
+      ) : loading ? (
+        <h1 className="choose">Loading phones...</h1>
       ) : (
-        <h1 className='choose'>Choose your phone</h1>
+        <h1 className="choose">Choose your phone</h1>
       )}
     </>
   );
