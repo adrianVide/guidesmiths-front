@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import phoneSelected from '../../actions/actions'
+import {phoneSelected, phoneList} from '../../actions/actions'
 import "./PhoneList.css";
 
 
