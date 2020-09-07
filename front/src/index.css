@@ -11,27 +11,4 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   align-content: center;
-
 }
-
-.flexitem1 {
-}
-
-.flexitem2 {
-
-}
-
-/* @media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-  .row {
-    max-width: 100%;
-  }
-}
-
-.container {
-  justify-content: center;
-} */
-
-

@@ -1,10 +1,21 @@
-import {takeLatest} from 'redux-saga/effects'
+import {takeLatest, put, call} from 'redux-saga/effects'
+import { phoneListError, phoneListSuccess } from '../actions/actions'
+import axios from 'axios';
+
+
 //worker function
-function* workerFetchPhones()
+export function* workerFetchPhones() {
+    try {
+        const resp = yield call(axios.get, 'http://localhost:3001/phones');
+        yield put(phoneListSuccess(resp.data))
+    } catch (error) {
+        yield put(phoneListError(error.message))
+    }
+}
 
 
 
 //watcher function
-function* watchFetchPhones() {
-    yield takeLatest('FETCH_PHONES', workerFetchPhones)
+export function* watchFetchPhones() {
+    yield takeLatest('PHONE_LIST_START', workerFetchPhones)
 }
