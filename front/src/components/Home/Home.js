@@ -4,6 +4,7 @@ import "./Home.css";
 import { PhoneList } from "../PhoneList/PhoneList";
 import { Phone } from "../Phone/Phone";
 import { Loading } from "../Loading/Loading";
+import { FullPageLoader } from "../FullPageLoader/FullPageLoader";
 
 export const HomePage = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,9 @@ export const HomePage = () => {
   return (
     <div className="wrapper">
       <div className="flexcont">
-        <Loading />
+        {/* <Loading /> */}
+        <FullPageLoader />
+
         <PhoneList />
         <Phone />
       </div>

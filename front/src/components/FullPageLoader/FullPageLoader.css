@@ -1,8 +1,8 @@
-.lds-ripple {
-    display: inline-block;
-    position: relative;
-    width: 80px;
-    height: 80px;
+  .lds-ripple {
+    left: 50%;
+    top: 30%;
+    z-index: 1000;
+    position: absolute;
 
   }
   .lds-ripple div {
@@ -31,4 +31,3 @@
       opacity: 0;
     }
   }
-  
