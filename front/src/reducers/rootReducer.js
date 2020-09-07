@@ -22,7 +22,7 @@ const rootReducer = (state = initialState, action) => {
     case "PHONE_LIST_SUCCESS":
       return {
         ...state,
-        phones: action.phones,
+        phones: action.payload.phones,
         loading: false,
       };
     case "PHONE_LIST_ERROR":

@@ -11,6 +11,7 @@ import "./PhoneList.css";
 export const PhoneList = () => {
   const dispatch = useDispatch();
   const phones = useSelector((state) => state.phones);
+  console.log(phones)
 
 
   
