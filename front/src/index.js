@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import * as serviceWorker from "./serviceWorker";
-import { Provider, useDispatch } from "react-redux";
-import { PhoneList } from "./components/PhoneList/PhoneList";
-import { Phone } from "./components/Phone/Phone";
+import { Provider } from "react-redux";
+// import { PhoneList } from "./components/PhoneList/PhoneList";
+// import { Phone } from "./components/Phone/Phone";
 import { HomePage } from "./components/Home/Home";
 import store from "./storeConfig";
-import {useEffect} from 'react'
+// import {useEffect} from 'react'
 
 
 

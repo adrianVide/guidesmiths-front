@@ -1,21 +1,11 @@
 import React from "react";
-import { useEffect } from "react";
-import {
-  watchFetchPhones,
-  workerFetchPhones,
-} from "../../middlewares/watchFetchPhones.saga";
 import { useSelector, useDispatch } from "react-redux";
-import { phoneSelected, phoneListStart, phoneListFetchAsync } from "../../actions/actions";
+import { phoneSelected } from "../../actions/actions";
 import "./PhoneList.css";
 
 export const PhoneList = () => {
   const dispatch = useDispatch();
   const phones = useSelector((state) => state.phones);
-  console.log(phones)
-
-
-  
-  
 
   function singlePhone(id) {
     const phone = phones.find((phone) => phone.id === id);

@@ -1,4 +1,3 @@
-import { PHONE_SELECTED, PHONE_LIST } from "../actions/actions";
 const initialState = {
   phones: [],
   phone: {},

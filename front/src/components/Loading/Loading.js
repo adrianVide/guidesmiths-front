@@ -1,15 +1,15 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import "./FullPageLoader.css";
+import "./Loading.css";
 
-export const FullPageLoader = () => {
+export const Loading = () => {
   const loading = useSelector((state) => state.loading);
 
   return (
     <>
       {loading ? (
         <>
-          <div class="lds-ripple">
+          <div className="lds-ripple">
             <div></div>
             <div></div>
           </div>
