@@ -5,7 +5,7 @@ context("Responsiveness", () => {
 
   });
 
-  it("Setting viewport size", () => {
+  it("User can see the app in different devices", () => {
     cy.get('button>h2').contains('iPhone 7').click()
     cy.viewport("macbook-15");
     cy.wait(200);

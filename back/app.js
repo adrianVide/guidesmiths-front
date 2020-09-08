@@ -22,11 +22,7 @@ app.get("/phones", (req, res) => {
     res.send(obj);  
   }, 2000);
 });
-// app.get("/phones", (req, res) => {
-  
-//     res.send(obj);  
- 
-// });
+
 
 app.listen(port, () => {
   console.log("API app listening on port " + port);

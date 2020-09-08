@@ -6,7 +6,7 @@ context("Check Buttons and loads", () => {
   
     });
   
-    it("Clicks on each phone buttons", () => {
+    it("User can click on each buttons and see the phone", () => {
         cy.get('button').click({ multiple: true })
     });
   });
