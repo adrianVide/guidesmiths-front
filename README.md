@@ -5,7 +5,7 @@ Test challenge using React/Redux and NodeJS
 Please navigate to `/back` on the console and run:
 
 ### ```npm i``` 
-### ```npm run start``` 
+### ```npm run dev``` 
 to keep the backend running with nodemon on port 3001.
 
 ## Local run
