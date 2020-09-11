@@ -121,7 +121,7 @@ context("Check Buttons and loads", () => {
       for (let i = 0; i < phones.length; i++) {
         cy.get(`[data-testid="${phones[i].id}"]`).find("button").click();
         // const listItem = cy.get(`div[data-test-id="${phones[i].id}"]`);
-      //   cy.contains(phones[i].imageFileName);
+        // cy.contains(phones[i].imageFileName);
         cy.get(`[alt='${phones[i].name}']`).should("be.visible");
       }
     });
