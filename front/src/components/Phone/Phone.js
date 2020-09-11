@@ -3,7 +3,9 @@ import { useSelector } from "react-redux";
 import "./Phone.css";
 
 export const Phone = () => {
+  //Get phone from state depending on button from PhoneList
   const phone = useSelector((state) => state.phone);
+  //Get loading state for showing spinner or not
   const loading = useSelector((state) => state.loading);
 
   return (

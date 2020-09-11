@@ -4,7 +4,7 @@ const initialState = {
   loading: true,
   error: undefined,
 };
-
+//Reducers
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case "PHONE_SELECTED":
