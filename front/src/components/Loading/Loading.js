@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import "./Loading.css";
 
 export const Loading = () => {
+  //Grab loading state from redux
   const loading = useSelector((state) => state.loading);
 
   return (

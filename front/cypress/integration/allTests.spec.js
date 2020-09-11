@@ -1,135 +1,189 @@
-context("Check Buttons and loads", () => {
-    beforeEach(() => {
-      cy.visit("http://localhost:3000");
-    });
-    const phones = [
-      {
-        id: 0,
-        name: "iPhone 7",
-        manufacturer: "Apple",
-        description:
-          "iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance*. And it looks every bit as powerful as it is. This is iPhone 7.",
-        color: "black",
-        price: 769,
-        imageFileName: "IPhone_7.png",
-        screen: "4,7 inch IPS",
-        processor: "A10 Fusion",
-        ram: 2,
-      },
-      {
-        id: 1,
-        name: "Galaxy S7",
-        manufacturer: "Samsung",
-        description:
-          "Introducing the smartphone your life can not do without, The Samsung Galaxy S7. Packed with features to keep you both productive and entertained, all in a sleek, slim design that fits comfortably in your hand or pocket.",
-        color: "grey",
-        price: 209,
-        imageFileName: "Galaxy_S7.png",
-        screen: "5,1 inch Quad-HD",
-        processor: "Snapdragon 820",
-        ram: 4,
-      },
-      {
-        id: 2,
-        name: "Honor 10",
-        manufacturer: "Huawei",
-        description:
-          "Great phone with an excellent interface. One of the best mid price range phones in the market.",
-        color: "blue",
-        price: 399,
-        imageFileName: "Honor_10.png",
-        screen: "5,84 inch Full-HD",
-        processor: "Kirin 970",
-        ram: 6,
-      },
-      {
-        id: 3,
-        name: "P10 Lite",
-        manufacturer: "Huawei",
-        description:
-          "Great phone with an excellent interface. One of the best mid price range phones in the market.",
-        color: "white",
-        price: 249,
-        imageFileName: "P10_Lite.jpg",
-        screen: "5,2 inch Full-HD",
-        processor: "Kirin 658",
-        ram: 4,
-      },
-      {
-        id: 4,
-        name: "Nokia 7.1",
-        manufacturer: "Nokia",
-        description:
-          "Great phone with an excellent interface. One of the best mid price range phones in the market.",
-        color: "black",
-        price: 275,
-        imageFileName: "Nokia_7.1.jpg",
-        screen: "5,84 inch Full-HD",
-        processor: "Octa-core",
-        ram: 4,
-      },
-      {
-        id: 5,
-        name: "Zen Phone 5",
-        manufacturer: "Asus",
-        description:
-          "Great phone with an excellent interface. One of the best mid price range phones in the market.",
-        color: "black",
-        price: 359,
-        imageFileName: "ZenPhone_5.jpg",
-        screen: "6,2 inch Full-HD",
-        processor: "Snapdragon 636",
-        ram: 6,
-      },
-      {
-        id: 6,
-        name: "MI A2",
-        manufacturer: "Xiaomi",
-        description:
-          "Great phone with an excellent interface. One of the best mid price range phones in the market.",
-        color: "black",
-        price: 179,
-        imageFileName: "Xiaomi_MI_A2.jpeg",
-        screen: "5,99 inch Full-HD",
-        processor: "Snapdragon 660",
-        ram: 6,
-      },
-      {
-        id: 7,
-        name: "Moto G6",
-        manufacturer: "Motorola",
-        description:
-          "Great phone with an excellent interface. One of the best mid price range phones in the market.",
-        color: "black",
-        price: 199,
-        imageFileName: "Moto_G6.png",
-        screen: "5,7 inch Full-HD",
-        processor: "Snapdragon 450",
-        ram: 3,
-      },
-    ];
-  
-    it("All phones listed", () => {
-      //   cy.get("data-testid").click({ multiple: true });
+context("Check Buttons and renders", () => {
+  beforeEach(() => {
+    cy.visit("http://localhost:3000");
+  });
+  const phones = [
+    {
+      id: 0,
+      name: "iPhone 7",
+      manufacturer: "Apple",
+      description:
+        "iPhone 7 dramatically improves the most important aspects of the iPhone experience. It introduces advanced new camera systems. The best performance and battery life ever in an iPhone. Immersive stereo speakers. The brightest, most colorful iPhone display. Splash and water resistance*. And it looks every bit as powerful as it is. This is iPhone 7.",
+      color: "black",
+      price: 769,
+      imageFileName: "IPhone_7.png",
+      screen: "4,7 inch IPS",
+      processor: "A10 Fusion",
+      ram: 2,
+    },
+    {
+      id: 1,
+      name: "Galaxy S7",
+      manufacturer: "Samsung",
+      description:
+        "Introducing the smartphone your life can not do without, The Samsung Galaxy S7. Packed with features to keep you both productive and entertained, all in a sleek, slim design that fits comfortably in your hand or pocket.",
+      color: "grey",
+      price: 209,
+      imageFileName: "Galaxy_S7.png",
+      screen: "5,1 inch Quad-HD",
+      processor: "Snapdragon 820",
+      ram: 4,
+    },
+    {
+      id: 2,
+      name: "Honor 10",
+      manufacturer: "Huawei",
+      description:
+        "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+      color: "blue",
+      price: 399,
+      imageFileName: "Honor_10.png",
+      screen: "5,84 inch Full-HD",
+      processor: "Kirin 970",
+      ram: 6,
+    },
+    {
+      id: 3,
+      name: "P10 Lite",
+      manufacturer: "Huawei",
+      description:
+        "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+      color: "white",
+      price: 249,
+      imageFileName: "P10_Lite.jpg",
+      screen: "5,2 inch Full-HD",
+      processor: "Kirin 658",
+      ram: 4,
+    },
+    {
+      id: 4,
+      name: "Nokia 7.1",
+      manufacturer: "Nokia",
+      description:
+        "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+      color: "black",
+      price: 275,
+      imageFileName: "Nokia_7.1.jpg",
+      screen: "5,84 inch Full-HD",
+      processor: "Octa-core",
+      ram: 4,
+    },
+    {
+      id: 5,
+      name: "Zen Phone 5",
+      manufacturer: "Asus",
+      description:
+        "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+      color: "black",
+      price: 359,
+      imageFileName: "ZenPhone_5.jpg",
+      screen: "6,2 inch Full-HD",
+      processor: "Snapdragon 636",
+      ram: 6,
+    },
+    {
+      id: 6,
+      name: "MI A2",
+      manufacturer: "Xiaomi",
+      description:
+        "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+      color: "black",
+      price: 179,
+      imageFileName: "Xiaomi_MI_A2.jpeg",
+      screen: "5,99 inch Full-HD",
+      processor: "Snapdragon 660",
+      ram: 6,
+    },
+    {
+      id: 7,
+      name: "Moto G6",
+      manufacturer: "Motorola",
+      description:
+        "Great phone with an excellent interface. One of the best mid price range phones in the market.",
+      color: "black",
+      price: 199,
+      imageFileName: "Moto_G6.png",
+      screen: "5,7 inch Full-HD",
+      processor: "Snapdragon 450",
+      ram: 3,
+    },
+  ];
+
+  it("All phones listed", () => {
+    for (let i = 0; i < phones.length; i++) {
+      cy.get("h2").contains(phones[i].name);
+    }
+  });
+
+  describe("Renders the selected phone component", () => {
+    it("Matches selected phone on the list with rendered view", () => {
       for (let i = 0; i < phones.length; i++) {
-        // const listItem = cy.get(`div[data-test-id="${phones[i].id}"]`);
-        cy.contains(phones[i].name);
+        cy.get(`[data-testid="${phones[i].id}"]`).find("button").click();
+        cy.get(`[data-testid="${phones[i].id}"]`).should(
+          "have.text",
+          phones[i].name
+        );
       }
     });
-    it("Image visible when clicked", () => {
+
+    it("Shows brand, name, description, price, specifications", () => {
+      for (let i = 0; i < phones.length; i++) {
+        cy.get(`[data-testid="${phones[i].id}"]`).find("button").click();
+        cy.get(".brand").contains(phones[i].manufacturer);
+        cy.get("h1").contains(phones[i].name);
+        cy.get(".price").contains(phones[i].price);
+        cy.get(".desc").contains(phones[i].description);
+        cy.get(".specs").contains(phones[i].screen);
+        cy.get(".specs").contains(phones[i].processor);
+        cy.get(".specs").contains(phones[i].ram);
+      }
+    });
+    it("Image visible when clicked and accessibility data working", () => {
       //   cy.get("data-testid").click({ multiple: true });
       for (let i = 0; i < phones.length; i++) {
         cy.get(`[data-testid="${phones[i].id}"]`).find("button").click();
         // const listItem = cy.get(`div[data-test-id="${phones[i].id}"]`);
-      //   cy.contains(phones[i].imageFileName);
+
         cy.get(`[alt='${phones[i].name}']`).should("be.visible");
+        cy.get(
+          `[src='http://localhost:3001/images/${phones[i].imageFileName}']`
+        ).should("be.visible");
       }
     });
   });
-  
-  // const listItem = cy.get(`div[data-test-id="${phones[i].id}"]`)
-  
-  // cy.get("[data-testid=phone.id]").as("phoneID")
-  
-  //   cy.get("@phoneID").should("contain", 8)
-  
+});
+
+context("Responsiveness", () => {
+  beforeEach(() => {
+    cy.visit("http://localhost:3000");
+    cy.get("h1").contains("Choose your phone");
+  });
+
+  it("User can see the app in different devices", () => {
+    cy.get("button>h2").contains("iPhone 7").click();
+    cy.viewport("macbook-15");
+    cy.wait(200);
+    cy.viewport("macbook-13");
+    cy.wait(200);
+    cy.viewport("macbook-11");
+    cy.wait(200);
+    cy.viewport("ipad-2");
+    cy.wait(200);
+    cy.viewport("ipad-mini");
+    cy.wait(200);
+    cy.viewport("iphone-6+");
+    cy.wait(200);
+    cy.viewport("iphone-6");
+    cy.wait(200);
+    cy.viewport("iphone-5");
+    cy.wait(200);
+    cy.viewport("iphone-4");
+    cy.wait(200);
+    cy.viewport("iphone-3");
+    cy.wait(200);
+    cy.viewport("ipad-2", "portrait");
+    cy.wait(200);
+    cy.viewport("iphone-4", "landscape");
+    cy.wait(200);
+  });
+});

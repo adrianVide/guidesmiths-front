@@ -1,9 +1,11 @@
+//Empty initial redux state
 const initialState = {
   phones: [],
   phone: {},
   loading: true,
   error: undefined,
 };
+
 //Reducers
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {

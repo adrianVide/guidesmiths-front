@@ -7,7 +7,8 @@ import { Loading } from "../Loading/Loading";
 
 export const HomePage = () => {
   const dispatch = useDispatch();
-
+  
+  //Trigger the data fetch on first load
   useEffect(() => {
     dispatch({ type: "PHONE_LIST_START" });
   }, [dispatch]);
